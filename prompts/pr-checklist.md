@@ -75,6 +75,7 @@ This catches 90% of issues before wasting reviewer time:
 - [ ] **Cleanup** — no debug code, console.log, dead code, commented-out blocks, stale TODO comments.
 - [ ] **Prior feedback addressed** — every review thread from previous rounds resolved.
 - [ ] **Lint and typecheck pass** — run the project's lint/typecheck commands.
+- [ ] **Zero `any` types** — every `any` replaced with `unknown` + type guard, or the real type. No exceptions in this PR's diff.
 
 ## 8. AI-Assisted Changes
 
@@ -111,6 +112,7 @@ These get a PR sent back immediately:
 - Debug noise left in (console.log, debugger, print statements).
 - No test evidence.
 - Prior review feedback ignored.
+- `any` type anywhere in the PR diff.
 
 ---
 
